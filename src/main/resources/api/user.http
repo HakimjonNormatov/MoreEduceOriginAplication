@@ -1,0 +1,17 @@
+###  add user
+POST http://localhost:8080/teacher
+Content-Type: application/json
+
+{
+  "original_full_name": "fullname",
+  "email": "normatovhakimjon07@gmail.com",
+  "phonenumber": "3234564534",
+  "username": "usfdwee",
+  "age": 22,
+  "address_Id": 2,
+  "password": "erertertert",
+  "repassword": "erertertert",
+  "fanlar": "ingliz",
+  "city": "T",
+  "region": "R"
+}
