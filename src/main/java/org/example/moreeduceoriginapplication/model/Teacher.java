@@ -23,14 +23,12 @@ public class Teacher  {
     private String original_full_name;
     @Email
     private String email;
-    @Column(nullable = false , unique = true)
+    @Column(nullable = false)
     private String phonenumber;
     @Column(nullable = false , unique = true)
     private String username;
     @Column(nullable = false)
     private Long age;
-    @ManyToOne
-    private Address address_Id;
     @Enumerated(EnumType.STRING)
     private Status status;
     @Column(nullable = false)
@@ -41,7 +39,10 @@ public class Teacher  {
     private LocalDateTime localDateTime= LocalDateTime.now();
     @Column(nullable = false)
     private String fanlar;
-
+    @Column(nullable = false)
+    private String city;
+    @Column(nullable = false)
+    private String region;
 
     private boolean enable;
 

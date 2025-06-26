@@ -21,9 +21,6 @@ public class StudentDto {
 
     private String repassword;
 
-    private Long address_id;
-
-
     //Address
 
     private String city;

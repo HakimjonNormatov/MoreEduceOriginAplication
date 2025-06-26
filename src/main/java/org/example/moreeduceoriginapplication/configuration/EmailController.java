@@ -13,7 +13,7 @@ public class EmailController {
     @Autowired
     private EmailService emailService;
 
-    @EventListener(ApplicationReadyEvent.class)
+//    @EventListener(ApplicationReadyEvent.class)
     public void sendEmail() {
         emailService.sendEmail("normatovhakimjon07@gmail.com", "something", "what's up");
     }

@@ -46,5 +46,11 @@ public class StudentController {
         Result result = studentService.deleteStudent(id);
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
+    @GetMapping(value = "/verify")
+        public HttpEntity<?>verifie(@RequestParam String token){
+            System.out.println("token -->"+token);
+            Result verify = studentService.verify(token);
+            return new ResponseEntity<>(verify , HttpStatus.OK);
+    }
 
 }

@@ -27,17 +27,22 @@ public class Students {
     private String username;
     @Column(nullable = false)
     private Long age;
-    @Column(nullable = false , unique = true)
+    @Column(nullable = false)
     private String phonenumber;
     @Column(nullable = false)
     private String password;
     @Column(nullable = false)
     private String repassword;
-    @ManyToOne
-    private Address address_id;
     @Enumerated(EnumType.STRING)
     private Status status;
     @CreatedDate
     private LocalDateTime localDateTime=LocalDateTime.now();
+
+    @Column(nullable = false)
+    private String city;
+    @Column(nullable = false)
+    private String region;
+
+    private boolean enable;
 
 }

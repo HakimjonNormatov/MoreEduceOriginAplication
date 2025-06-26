@@ -48,4 +48,12 @@ public class TeacherController {
         return new ResponseEntity<>(result , HttpStatus.OK);
     }
 
+//    @GetMapping(value = "/verify")
+//    public HttpEntity<?>verifie(@RequestParam String token){
+//        System.out.println("token -->"+token);
+//        Result verify = teacherService.verify(token);
+//        return new ResponseEntity<>(verify , HttpStatus.OK);
+//
+//    }
+
 }

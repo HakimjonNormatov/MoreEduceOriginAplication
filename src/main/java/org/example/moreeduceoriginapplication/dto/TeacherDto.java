@@ -19,8 +19,6 @@ public class TeacherDto {
 
     private Long age;
 
-    private Long address_Id;
-
     private String password;
 
     private String repassword;

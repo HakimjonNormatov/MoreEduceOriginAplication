@@ -1,6 +1,8 @@
 package org.example.moreeduceoriginapplication.controller;
 
 import jakarta.validation.Valid;
+import org.example.moreeduceoriginapplication.dto.AuthResponse;
+import org.example.moreeduceoriginapplication.dto.LoginRequest;
 import org.example.moreeduceoriginapplication.dto.StudentDto;
 import org.example.moreeduceoriginapplication.dto.TeacherDto;
 import org.example.moreeduceoriginapplication.model.Result;
@@ -20,7 +22,7 @@ public class AuthController {
 //    StudentService studentService;
 
 
-    @PostMapping(value = "/Teacher/registration")
+    @PostMapping(value = "/registration")
     public ResponseEntity<Result>registration(@RequestBody @Valid TeacherDto dto){
         Result result = teacherService.addTeacher(dto);
         return ResponseEntity.ok(result);
@@ -28,8 +30,8 @@ public class AuthController {
 
 
     @PostMapping(value = "/Teacher/verify")
-    public ResponseEntity<Result>verify1(@RequestParam String token){
-        Result verify = teacherService.verify(token);
+    public ResponseEntity<AuthResponse>verify1(@RequestParam String token){
+        AuthResponse verify = teacherService.verify(token);
         return ResponseEntity.ok(verify);
     }
 
@@ -46,6 +48,14 @@ public class AuthController {
 //    }
 
 
+    @PostMapping(value = "/login")
+    public ResponseEntity<AuthResponse>login(@RequestBody LoginRequest request){
+        AuthResponse response=teacherService.login(request);
+
+        return ResponseEntity.ok(response);
+
+
+    }
 
 
 }

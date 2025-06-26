@@ -1,17 +1,34 @@
-###  add user
-POST http://localhost:8080/teacher
+####  add user
+#POST http://localhost:8080/teacher
+#Content-Type: application/json
+#
+#{
+#  "original_full_name": "fullname",
+#  "email": "normatovhakimjon07",
+#  "phonenumber": "3234564534",
+#  "username": "usfdwee",
+#  "age": 22,
+#  "address_Id": 2,
+#  "password": "erertertert",
+#  "repassword": "erertertert",
+#  "fanlar": "ingliz",
+#  "city": "T",
+#  "region": "R"
+#}
+
+### add user
+POST http://localhost:8080/auth/registration
 Content-Type: application/json
 
 {
-  "original_full_name": "fullname",
-  "email": "normatovhakimjon07@gmail.com",
-  "phonenumber": "3234564534",
-  "username": "usfdwee",
-  "age": 22,
-  "address_Id": 2,
-  "password": "erertertert",
-  "repassword": "erertertert",
-  "fanlar": "ingliz",
-  "city": "T",
-  "region": "R"
+  "email": "normatovhakimjon07gmail.com",
+  "username": "xakimjon",
+  "age": 43,
+  "phonenumber": "+3245678",
+  "password": "password",
+  "repassword": "password",
+  "address_id":1,
+  "city": "Toshkent",
+  "region": "Sergeli"
+
 }
