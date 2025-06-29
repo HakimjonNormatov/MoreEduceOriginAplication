@@ -35,17 +35,6 @@ public class AuthController {
         return ResponseEntity.ok(verify);
     }
 
-//    @PostMapping(value = "/Student/registration")
-//    public ResponseEntity<Result>registration(@RequestBody @Valid StudentDto dto){
-//        Result result = studentService.createStudent(dto);
-//        return ResponseEntity.ok(result);
-//    }
-//
-//    @PostMapping(value = "/Student/verify")
-//    public ResponseEntity<Result>verify2(@RequestParam String token){
-//        Result verify = studentService.verify(token);
-//        return ResponseEntity.ok(verify);
-//    }
 
 
     @PostMapping(value = "/login")
